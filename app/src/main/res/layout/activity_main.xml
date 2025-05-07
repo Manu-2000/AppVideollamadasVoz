@@ -15,9 +15,9 @@
         android:text="¡Hola User! \n ¿A quién deseas llamar?"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tvUsersLabel"
@@ -26,60 +26,51 @@
         android:layout_marginTop="24dp"
         android:text="Usuarios Disponibles:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameUserId" />
+        app:layout_constraintTop_toBottomOf="@id/tvNameUserId"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUsers"
-        android:layout_width="379dp"
-        android:layout_height="256dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvUsersLabel"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartVideoCall"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUsersLabel"
-        tools:listitem="@layout/item_user" />
-
-    <Button
-        android:id="@+id/btnStartVideoCall"
-        style="@style/Widget.Material3.Button.IconButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Video"
-        android:visibility="gone"
-        app:icon="@drawable/video"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvUsers"
-        tools:layout_editor_absoluteX="16dp" />
-
-
-    <Button
-        android:id="@+id/btnStartVoiceCall"
-        style="@style/Widget.Material3.Button.IconButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Voz"
-        android:visibility="gone"
-        app:icon="@drawable/phone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline_center"
-        app:layout_constraintTop_toTopOf="@+id/rvUsers" />
-
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_user" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.5" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnStartVideoCall"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        android:text="Videollamada"
+        android:visibility="invisible"
+        app:icon="@drawable/video"
+        app:layout_constraintTop_toBottomOf="@id/rvUsers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_center"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
+    <Button
+        android:id="@+id/btnStartVoiceCall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Llamada de voz"
+        android:visibility="invisible"
+        app:icon="@drawable/phone"
+        app:layout_constraintTop_toBottomOf="@id/rvUsers"
+        app:layout_constraintStart_toEndOf="@id/guideline_center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
