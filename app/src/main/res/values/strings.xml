@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Videollamadas y Llamadas - Proyecto Grupal</string>
+    <string name="userId">Crear un usuario</string>
+    <string name="btnLogin">Ingresar</string>
+
+    <string name="tvNameUserId">Buenas¿A quién desea llamar?</string>
+    <string name="etNameUserId">Ingrese el id que corresponde al usuario </string>
+
+</resources>

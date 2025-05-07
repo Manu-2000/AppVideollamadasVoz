@@ -1,0 +1,42 @@
+[versions]
+agp = "8.8.0"
+firebaseBom = "33.13.0"
+kotlin = "2.1.0"
+coreKtx = "1.16.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.10.1"
+constraintlayout = "2.2.1"
+zego_uikit_prebuilt_call_android = "2.6.0"
+zego_uikit_prebuilt_call_androidVersion = "3.9.2"
+zegoCloudV="+"
+googleGmsGoogleServices = "4.4.2"
+firebaseAuth = "23.2.0"
+playServicesBase = "18.0.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
+google-firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+zego_uikit_prebuilt_call_android-v260 = { module = "com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android", version.ref = "zego_uikit_prebuilt_call_android" }
+zego_uikit_prebuilt_call_android-v392 = { module = "com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android", version.ref = "zego_uikit_prebuilt_call_androidVersion" }
+zegoCloud={group="com.github.ZEGOCLOUD" , name="zego_uikit_prebuilt_call_android", version.ref="zegoCloudV"}
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+play-services-base = { group = "com.google.android.gms", name = "play-services-base", version.ref = "playServicesBase" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+
